@@ -34,3 +34,25 @@
   margin: 40px auto;
   padding: 20px;
 }
+
+.p-prev{
+  padding: 10px 10px 10px 10px;
+  transition: box-shadow .3s ease-in-out; /* Add transition property with 5s duration and ease-in-out timing function */
+
+}
+
+.p-prev h3{
+  padding-left: 10px;
+  color: cornflowerblue;
+  transition: color .3s ease-in-out; /* Add transition property with 5s duration and ease-in-out timing function */
+
+}
+
+.p-prev:hover{
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.p-prev:hover h3{
+ color: #f1356d;
+
+}
