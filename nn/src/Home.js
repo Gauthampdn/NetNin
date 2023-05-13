@@ -4,7 +4,7 @@ const Home = () => {
     //making the initial val = mario
     const[peeps, setPeeps] = useState([
         {name: "Gautham", Age: 19, Major: "CS", id: 1},
-        {name: "Varsha", Age: 19, Major: "bio", id: 2},
+        {name: "Varsh", Age: 19, Major: "bio", id: 2},
         {name: "Abi", Age: 20, Major: "PS", id: 3}
 
     ]);
