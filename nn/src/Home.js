@@ -21,12 +21,13 @@ const Home = () => {
             })
             .then(data => {
                 console.log(data)
+                setPeeps(data)
             })
     }, []);
 
     return (
         <div className="home">
-            {/* <People peoples = {peeps} hd = {handleDelete}/> */}
+            {peeps && <People peoples = {peeps} hd = {handleDelete}/>}
         </div>
     );
 }
