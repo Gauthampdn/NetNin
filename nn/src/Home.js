@@ -16,11 +16,17 @@ const Home = () => {
 
     useEffect(() => {
         fetch("http://localhost:8000/peeps")
+            .then( res => {
+                return res.json();
+            })
+            .then(data => {
+                console.log(data)
+            })
     }, []);
 
     return (
         <div className="home">
-            <People peoples = {peeps} hd = {handleDelete}/>
+            {/* <People peoples = {peeps} hd = {handleDelete}/> */}
         </div>
     );
 }
