@@ -6,6 +6,7 @@ import People from './People';
 const Home = () => {
     //making the initial val = mario
     const[peeps, setPeeps] = useState(null);
+    const[loading, setloading] = useState(true);
 
 
 
@@ -20,13 +21,18 @@ const Home = () => {
                 return res.json();
             })
             .then(data => {
-                console.log(data)
-                setPeeps(data)
+                setTimeout(() => {
+                    setPeeps(data)
+                    setloading(false)
+
+
+                }, 500)
             })
     }, []);
 
     return (
         <div className="home">
+            {loading && <div> loading... </div>}
             {peeps && <People peoples = {peeps} hd = {handleDelete}/>}
         </div>
     );
